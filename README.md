@@ -4,7 +4,7 @@ A Swift µframework for early return in higher order functions.
 ```swift
 import EarlyReturn
 
-[1,2,3,4,5].reduce(false) {
+[1,2,3,4,5].earlyReduce(false) {
     if $1 == 2 { // the array contains a 2
         return .Early(true)
     }
