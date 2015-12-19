@@ -1,4 +1,4 @@
-enum ReturnType<T> {
+public enum ReturnType<T> {
 
     case Early(T)
     case Normal(T)
@@ -19,8 +19,8 @@ enum ReturnType<T> {
     }
 }
 
-extension SequenceType {
-    func earlyReduce<T>(initial: T, combine: (T, Self.Generator.Element) -> ReturnType<T>) -> T {
+public extension SequenceType {
+    public func earlyReduce<T>(initial: T, combine: (T, Self.Generator.Element) -> ReturnType<T>) -> T {
 
         var result = initial
         for el in self {
